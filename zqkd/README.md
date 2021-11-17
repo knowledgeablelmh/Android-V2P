@@ -91,3 +91,7 @@
 ## 中青火爆转发
 * 匹配链接 https://kandian.wkandian.com/v17/NewTask/getTaskList.json
 * 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_share.js
+
+## 中青5分钟60分钟任务
+* 匹配链接 https://kandian.wkandian.com/v17/Ad/getReward.json
+* 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_5_60.js
