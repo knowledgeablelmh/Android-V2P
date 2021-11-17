@@ -1,3 +1,12 @@
+## 中青重新订阅
+* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqcx.json
+
+## 中青任务订阅
+* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json
+
+
+
+
 ## 特别声明:
 
 * 本仓库涉仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
