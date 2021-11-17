@@ -1,8 +1,3 @@
-/*
-软件名称：晶彩看点5分钟60分钟任务领取
-
-*/
-
 const $ = new Env('晶彩看点5分钟60分钟任务领取');
 let jcerciboxbody= $.isNode() ? (process.env.jcerciboxbody ? process.env.jcerciboxbody : "") : ($.getdata('jcerciboxbody') ? $.getdata('jcerciboxbody') : "")
 let jcboxbodyArr = []
