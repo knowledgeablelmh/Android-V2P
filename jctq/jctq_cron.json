@@ -2,7 +2,6 @@
   "name": "晶彩天气定时任务订阅",
   "desc": "无",
   "date": "2021-11-17",
-  "author": "https://t.me/ShaolinTemple1",
   "resource": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json",
   "list": [
     {
