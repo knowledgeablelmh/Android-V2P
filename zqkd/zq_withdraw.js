@@ -1,31 +1,3 @@
-/*
-中青自动提现 zq_withdraw.js，
-调用zq_cookie,zq_withdraw,zq_cash
-
-赞赏:邀请码57984759
-
-万分感谢！！！
-
-脚本地址：
-https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zq_withdraw.js
-定时确保在每日首次火爆转发之后（zq_share.js），一天一次
-***************************************************************************
-v2p食用说明：
-1.添加重写如下：
-https://kandian.wkandian.com/v5/wechat/withdraw2.json 重写目标 https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zq_withdraw.js
-2.打开app进入提现页面，选择对应金额，点击立即提现（不管当日是否已经提现，都能抓），到变量中查看到有zq_withdraw即可
-3.注意多账号用户抓包zq_withdraw时需要与zq_cookie账号顺序一致
-4.zq_cash不填默认0.3元，填的话有0.3，30两个选项（boxjs订阅中可直接修改，没有订阅的话直接新建变量即可）
-5.zq_withdraw务必与zq_cash金额一致，即修改zq_withdraw时也要修改zq_cash
-****************************************************************************
-青龙食用说明：
-1.自己抓包数据
-2.export zq_withdraw="p=xxx"(多账号用@隔开)
-3.export zq_cash="0.3"或者export zq_cash="30"，不填默认30
-4.多账号用户抓包zq_withdraw时需要与zq_cookie账号顺序一致
-5.zq_withdraw务必与zq_cash金额一致，即修改zq_withdraw时也要修改zq_cash
-*/
-
 const $ = new Env("中青看点提现");
 const notify = $.isNode() ? require('./sendNotify') : '';
 message = ""
