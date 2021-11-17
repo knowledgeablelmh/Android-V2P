@@ -140,7 +140,7 @@
       "time": "0 20 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqqd.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_5_60.js"
       }
     },
     {
