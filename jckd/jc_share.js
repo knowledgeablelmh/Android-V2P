@@ -1,19 +1,3 @@
-/*
-shaolin-kongfu
-
-软件名称：晶彩看点
-赞赏:邀请码54870223
-
-万分感谢！！
-
-[rewrite_local]
-
-#火爆转发
-https://ant.xunsl.com/v17/NewTask/getTaskList.json 重写目标 https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_share.js
-[MITM]
-hostname = ant.xunsl.com
-*/
-
 const $ = new Env("晶彩看点火爆转发");
 const notify = $.isNode() ? require('./sendNotify') : '';
 message = ""
