@@ -6,7 +6,7 @@
   "resource": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json",
   "list": [
     {
-      "name": "中青签到",
+      "name": "中青看点签到",
       "type": "cron",
       "time": "30 0 * * *",
       "job": {
@@ -15,7 +15,7 @@
       }
     },
     {
-      "name": "中青文章",
+      "name": "中青看点文章",
       "type": "cron",
       "time": "30 7,12,18 * * *",
       "running": true,
@@ -25,7 +25,7 @@
       }
     },
     {
-     "name": "中青看看赚",
+     "name": "中青看点看看赚",
       "type": "cron",
       "time": "45 9,10 * * *",
       "running": true,
@@ -35,7 +35,7 @@
       }
     },
     {
-      "name": "中青火爆转发",
+      "name": "中青看点火爆转发",
       "type": "cron",
       "time": "15 6,12,18 * * *",
       "running": true,
@@ -45,7 +45,7 @@
       }
     },
     {
-      "name": "中青福利视频",
+      "name": "中青看点福利视频",
       "type": "cron",
       "time": "30 12 * * *",
       "running": true,
@@ -55,7 +55,7 @@
       }
     },
     {
-      "name": "中青每日任务宝箱领取",
+      "name": "中青看点每日任务宝箱领取",
       "type": "cron",
       "time": "30 20 * * *",
       "running": true,
@@ -65,7 +65,7 @@
       }
     },
     {
-      "name": "中青每日收益统计",
+      "name": "中青看点每日收益统计",
       "type": "cron",
       "time": "15 23 * * *",
       "running": true,
@@ -75,7 +75,7 @@
       }
     },
     {
-      "name": "中青好友签到红包",
+      "name": "中青看点好友签到红包",
       "type": "cron",
       "time": "15 7 * * *",
       "running": true,
@@ -85,7 +85,7 @@
       }
     },
     {
-      "name": "中青抽奖",
+      "name": "中青看点抽奖",
       "type": "cron",
       "time": "30 8,10 * * *",
       "running": true,
@@ -95,7 +95,7 @@
       }
     },
     {
-      "name": "中青打卡赚",
+      "name": "中青看点打卡赚",
       "type": "cron",
       "time": "45 5,9 * * *",
       "running": true,
@@ -105,7 +105,7 @@
       }
     },
     {
-      "name": "中青搜索赚",
+      "name": "中青看点搜索赚",
       "type": "cron",
       "time": "30 6 * * *",
       "running": true,
@@ -115,7 +115,7 @@
       }
     },
     {
-      "name": "中青浏览赚",
+      "name": "中青看点浏览赚",
       "type": "cron",
       "time": "45 6 * * *",
       "running": true,
@@ -125,7 +125,7 @@
       }
     },
     {
-      "name": "中青阅读翻倍",
+      "name": "中青看点阅读翻倍",
       "type": "cron",
       "time": "30 5 * * *",
       "running": true,
@@ -135,7 +135,7 @@
       }
     },
     {
-      "name": "中青5分钟60分钟任务",
+      "name": "中青看点5分钟60分钟任务",
       "type": "cron",
       "time": "0 20 * * *",
       "job": {
