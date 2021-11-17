@@ -8,7 +8,7 @@
     {
       "name": "晶彩天气任务签到",
       "type": "cron",
-      "time": "30 21 * * *",
+      "time": "30 0,21 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_reward.js"
