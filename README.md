@@ -8,6 +8,10 @@
 ## 晶彩看点任务订阅
 * https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json
 
+## 晶彩看点重新订阅
+* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctqcx.json
+## 晶彩看点任务订阅
+* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json
 
 
 ## 特别声明:
