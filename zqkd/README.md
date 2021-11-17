@@ -45,12 +45,13 @@
 - 搜索赚只支持带（火）图标任务
 
 
-MITM解析域名
-kandian.wkandian.com
+* MITM解析域名
+* kandian.wkandian.com
 
-中青文章
+* 中青文章
 https://kandian.wkandian.com/v5/article/info.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js
-中青视频
+
+* 中青视频
 https://kandian.wkandian.com/v5/article/detail.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js
 中青阅读时长
 https://kandian.wkandian.com/v5/user/stay.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js
