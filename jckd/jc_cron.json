@@ -1,107 +1,116 @@
 {
   "name": "晶彩看点定时任务订阅",
   "desc": "无",
-  "date": "2021-08-05 20:32:08",
+  "date": "2021-11-17",
   "author": "https://t.me/ShaolinTemple1",
-  "resource": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_cron.json",
+  "resource": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json",
   "list": [
     {
-      "name": "晶彩签到",
+      "name": "晶彩看点签到",
       "type": "cron",
-      "time": "15 2 * * *",
+      "time": "30 0 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcqd.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcqd.js"
       }
     },
     {
-      "name": "晶彩文章",
+      "name": "晶彩看点5分钟60分钟任务",
+      "type": "cron",
+      "time": "30 18 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_5_60.js"
+      }
+    },    
+    {
+      "name": "晶彩看点文章",
       "type": "cron",
       "time": "30 7,12,18 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcwz.js"
       }
     },
     {
-     "name": "晶彩看看赚",
+     "name": "晶彩看点看看赚",
       "type": "cron",
-      "time": "45 9 * * *",
+      "time": "45 9,10 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jckkz.js"
       }
     },
     {
-      "name": "晶彩火爆转发",
+      "name": "晶彩看点火爆转发",
       "type": "cron",
       "time": "15 6,12,18 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_share.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_share.js"
       }
     },
     {
-      "name": "晶彩福利视频",
+      "name": "晶彩看点福利视频",
       "type": "cron",
-      "time": "20 21 * * *",
+      "time": "30 12 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_Adv_video.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_Adv_video.js"
       }
     },
     {
-      "name": "晶彩每日任务宝箱领取",
+      "name": "晶彩看点每日任务宝箱",
       "type": "cron",
-      "time": "15 22 * * *",
+      "time": "30 20 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcbox.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcbox.js"
       }
     },
     {
-      "name": "晶彩好友签到红包",
+      "name": "晶彩看点好友签到红包",
       "type": "cron",
       "time": "15 7 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_friendSign.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_friendSign.js"
       }
     },
     {
-      "name": "晶彩抽奖",
+      "name": "晶彩看点抽奖",
       "type": "cron",
-      "time": "34 22 * * *",
+      "time": "30 8,10 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_Rotary.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_Rotary.js"
       }
     },
     {
-      "name": "晶彩提现",
+      "name": "晶彩看点提现",
       "type": "cron",
-      "time": "34 10 * * *",
+      "time": "30 23 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_withdraw.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_withdraw.js"
       }
     },
     {
-      "name": "晶彩每日收益统计",
+      "name": "晶彩看点每日收益统计",
       "type": "cron",
       "time": "15 23 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_today_score.js"
+        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_today_score.js"
       }
     }
   ]
