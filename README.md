@@ -1,4 +1,4 @@
-## 搬运整理自 @shaolin-kongfu  @leafxcy 
+## 搬运整理自 [@shaolin-kongfu](https://github.com/shaolin-kongfu)[@leafxcy](https://github.com/leafxcy)
 
 ## 中青看点重新订阅
 * https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqcx.json
