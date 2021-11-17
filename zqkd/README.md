@@ -45,38 +45,38 @@
 - 搜索赚只支持带（火）图标任务
 
 
-* MITM解析域名
+## MITM解析域名
 * kandian.wkandian.com
 
-* 中青文章
+## 中青文章
 * https://kandian.wkandian.com/v5/article/info.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js
 
-* 中青视频
+## 中青视频
 * https://kandian.wkandian.com/v5/article/detail.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js
-* 
-* 中青阅读时长
+
+## 中青阅读时长
 * https://kandian.wkandian.com/v5/user/stay.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js
 
-* 中青搜索赚
+## 中青搜索赚
 * https://kandian.wkandian.com/v5/Sousuo/playStart.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqssz.js
 
-* 中青签到
+## 中青签到
 * https://kandian.wkandian.com/v5/CommonReward/toGetReward.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqqd.js
 
-* 中青浏览赚
+## 中青浏览赚
 * https://kandian.wkandian.com/v5/task/browse_start.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqllz.js
 
-* 中青看看赚
+## 中青看看赚
 * https://kandian.wkandian.com/v5/nameless/adlickstart.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqkkz.js
 
-* 中青宝箱
+## 中青宝箱
 * https://kandian.wkandian.com/v5/CommonReward/toGetReward.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqbox.js
 
-* 中青自动提现
+## 中青自动提现
 * https://kandian.wkandian.com/v5/wechat/withdraw2.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_withdraw.js
 
-* 中青每日收益查询
+## 中青每日收益查询
 * https://kandian.wkandian.com/v17/NewTask/getTaskList.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_today_score.js
 
-* 中青火爆转发
+## 中青火爆转发
 * https://kandian.wkandian.com/v17/NewTask/getTaskList.json 重写目标 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_share.js
