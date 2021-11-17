@@ -1,17 +1,3 @@
-/*
-shaolin-kongfu
-
-软件名称：晶彩看点
-赞赏:邀请码54870223
-万分感谢！！
-
-
-
-转盘抽奖，使用jc_cookie
-
-
- */
-
 const $ = new Env("晶彩看点大转盘抽奖");
 const notify = $.isNode() ? require('./sendNotify') : '';
 message = ""
