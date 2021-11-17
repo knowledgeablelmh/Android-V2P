@@ -1,18 +1,3 @@
-/*
-shaolin-kongfu
-
-软件名称：中青看点
-赞赏:邀请码57984759
-
-万分感谢！！
-
-[rewrite_local]
-
-#看看赚
-https://kandian.wkandian.com/v5/nameless/adlickstart.json 重写目标 https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zqkkz.js
-[MITM]
-hostname = kandian.wkandian.com
-*/
 const $ = new Env("中青看点看看赚");
 const notify = $.isNode() ? require('./sendNotify') : '';
 message = ""
