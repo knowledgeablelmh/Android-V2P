@@ -1,19 +1,3 @@
-/*
-shaolin-kongfu
-
-软件名称：晶彩看点
-赞赏:邀请码54870223
-万分感谢！！
-
-好友签到红包位置：打开app → 下方左起第三个选项（赚钱图标） → 中间好友红包（在看看赚的左边）
-
-每天每位好友签到后有4个红包，前两个是100金币，后面两个是10金币，先抢先得
-
-没有好友的可以加群，让群友扫码：https://t.me/ShaolinTemple2
-
-
- */
-
 const $ = new Env("晶彩看点好友签到红包");
 const notify = $.isNode() ? require('./sendNotify') : '';
 message = ""
