@@ -1,5 +1,3 @@
-
-
 const $ = new Env("晶彩看点福利视频");
 const notify = $.isNode() ? require('./sendNotify') : '';
 message = ""
