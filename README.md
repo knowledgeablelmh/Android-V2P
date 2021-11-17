@@ -1,9 +1,12 @@
-## 中青重新订阅
+## 中青看点重新订阅
 * https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqcx.json
-
-## 中青任务订阅
+## 中青看点任务订阅
 * https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json
 
+## 晶彩看点重新订阅
+* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jccx.json
+## 晶彩看点任务订阅
+* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json
 
 
 
