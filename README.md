@@ -7,19 +7,19 @@
 ## 不要fork不要fork不要fork不要fork不要fork不要fork不要fork不要fork不要fork不要fork
 
 ## 中青看点重写订阅
-* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqcx.json
+* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqcx.json
 ## 中青看点任务订阅
-* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json
+* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json
 
 ## 晶彩看点重写订阅
-* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jccx.json
+* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jccx.json
 ## 晶彩看点任务订阅
-* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json
+* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json
 
 ## 晶彩天气重写订阅
-* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctqcx.json
+* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctqcx.json
 ## 晶彩天气任务订阅
-* https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json
+* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json
 
 
 ## 特别声明:
