@@ -34,6 +34,16 @@
       }
     },
     {
+     "name": "晶彩天气抽奖",
+      "type": "cron",
+      "time": "30 8,10 * * *",
+      "running": true,
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_Rotary.js"
+      }
+    },
+    {
      "name": "晶彩天气分享和助力阅读",
       "type": "cron",
       "time": "30 9,14 * * *",
