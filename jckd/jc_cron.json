@@ -3,7 +3,7 @@
   "desc": "无",
   "date": "2021-11-17",
   "author": "https://t.me/ShaolinTemple1",
-  "resource": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json",
+  "resource": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json",
   "list": [
     {
       "name": "晶彩看点签到",
@@ -11,7 +11,7 @@
       "time": "30 0 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcqd.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcqd.js"
       }
     },
     {
@@ -20,7 +20,7 @@
       "time": "30 18 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_5_60.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_5_60.js"
       }
     },    
     {
@@ -30,7 +30,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcwz.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcwz.js"
       }
     },
     {
@@ -40,7 +40,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jckkz.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jckkz.js"
       }
     },
     {
@@ -50,7 +50,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_share.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_share.js"
       }
     },
     {
@@ -60,7 +60,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_Adv_video.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_Adv_video.js"
       }
     },
     {
@@ -70,7 +70,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcbox.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jcbox.js"
       }
     },
     {
@@ -80,7 +80,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_friendSign.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_friendSign.js"
       }
     },
     {
@@ -90,7 +90,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_Rotary.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_Rotary.js"
       }
     },
     {
@@ -100,7 +100,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_withdraw.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_withdraw.js"
       }
     },
     {
@@ -110,7 +110,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_today_score.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_today_score.js"
       }
     }
   ]
