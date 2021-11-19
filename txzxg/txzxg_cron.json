@@ -1,0 +1,17 @@
+{
+  "name": "腾讯自选股定时任务订阅",
+  "desc": "无",
+  "date": "2021-11-19",
+  "resource": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/txzxg/txzxg_cron.json",
+  "list": [
+    {
+      "name": "晶彩天气任务签到",
+      "type": "cron",
+      "time": "30 0,21 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/txzxg/txstock.js"
+      }
+    }
+  ]
+}
