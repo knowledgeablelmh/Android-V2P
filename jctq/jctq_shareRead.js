@@ -1,14 +1,10 @@
 /*
 安卓：晶彩天气(v8.3.7)
 
-此脚本负责：
-签到和翻倍，任务奖励领取，统计今日收益，自动提现
-
-请将定时放在看看赚和阅读任务后面
-如果不想自动提现的，请不要捉提现body，或者新建环境变量jctqWithdrawFlag，写成0
+转发和分享阅读，请勿贪心，小心黑号
 */
 
-const jsname = '晶彩天气任务签到'
+const jsname = '晶彩天气分享阅读'
 const $ = Env(jsname)
 const notifyFlag = 1; //0为关闭通知，1为打开通知,默认为1
 const logDebug = 0
@@ -19,21 +15,18 @@ let notifyStr = ''
 let rndtime = "" //毫秒
 let httpResult //global buffer
 
-let numBoxbody
-
-let jctqWithdrawFlag =   ($.isNode() ? process.env.jctqWithdrawFlag   : $.getdata('jctqWithdrawFlag'))   || 1;
-let jctqBoxbody =        ($.isNode() ? process.env.jctqBoxbody        : $.getdata('jctqBoxbody'))        || '';
-let jctqQdBody =         ($.isNode() ? process.env.jctqQdBody         : $.getdata('jctqQdBody'))         || '';
-let jctqSignDoubleBody = ($.isNode() ? process.env.jctqSignDoubleBody : $.getdata('jctqSignDoubleBody')) || '';
-let jctqWithdraw =       ($.isNode() ? process.env.jctqWithdraw       : $.getdata('jctqWithdraw'))       || '';
-let jctqCookie =         ($.isNode() ? process.env.jctqCookie         : $.getdata('jctqCookie'))         || '';
-
-let jctqRewardBodyArr = []
-let jctqSignDoubleBodyArr = []
-let jctqWithdrawArr = []
+let jctqCookie = ($.isNode() ? process.env.jctqCookie : $.getdata('jctqCookie')) || '';
 let jctqCookieArr = []
 
-let withdrawSuccess = 0
+let userCk = ''
+let readCount = 0
+
+let jctqShareNum = ($.isNode() ? process.env.jctqShareNum : $.getdata('jctqShareNum')) || 0;
+
+let newsItem = ''
+let UserAgent = ''
+let si = ''
+let iosVer = ['13_4_5', '13_4_1', '13_4', '13_3_1', '13_3', '13_2_3', '13_2_2', '13_2', '13_1_3', '13_1_2', '13_1_1', '13_1', '13_0', '12_4_1', '12_4', '12_3_1', '12_3', '12_2', '12_1_4', '12_1_3', '12_1_2', '12_1_1', '12_1', '12_0_1', '12_0', '11_4_1', '11_4', '11_3_1', '11_3', '11_2_6', '11_2_5', '11_2_2', '11_2_1', '11_2', '11_1_2', '11_1_1', '11_1', '11_0_3', '11_0_2', '11_0_1', '11_0', '10_3_3', '10_3_2', '10_3_1', '10_3', '10_2_1', '10_2', '10_1_1', '10_1', '10_0_2', '10_0_1', '9_3_5', '9_3_4', '9_3_3', '9_3_2', '9_3_1', '9_3', '9_2_1', '9_2', '9_1', '9_0_2', '9_0_1']
 
 ///////////////////////////////////////////////////////////////////
 
@@ -45,52 +38,48 @@ let withdrawSuccess = 0
     }
     else
     {
-        await checkEnv()
-        
-        numBoxbody = jctqRewardBodyArr.length
-        console.log(`找到${numBoxbody}个签到/奖励body`)
-        
-        for(let i=0; i<numBoxbody; i++) {
-            let rewardBody = jctqRewardBodyArr[i]
-            await toGetReward(rewardBody,i)
-            await $.wait(2000)
+        if(!(await checkEnv())){
+            return
         }
         
-        numBoxbody = jctqSignDoubleBodyArr.length
-        console.log(`找到${numBoxbody}个签到翻倍body，观看32秒视频后开始领取下一个`)
-        
-        for(let i=0; i<numBoxbody; i++) {
-            let rewardBody = jctqSignDoubleBodyArr[i]
-            await $.wait(32000)
-            await toDouble(rewardBody)
-        }
-        
-        if(jctqWithdrawFlag > 0 && jctqWithdrawArr.length > 0) {
-            numBoxbody = jctqWithdrawArr.length
-            console.log(`找到${numBoxbody}个提现body`)
+        for(let j=0; j<jctqCookieArr.length; j++) {
             
-            for(let i=0; i<numBoxbody; i++) {
-                let withBody = jctqWithdrawArr[i]
-                await withdraw(withBody)
-                await $.wait(1000)
+            userCk = jctqCookieArr[j]
+            
+            console.log(`=========== 账号${j+1} 开始分享转发 ===========`)
+            
+            newsItem = ''
+            readCount = 0
+            await listsNewTag()
+            
+            if(newsItem) {
+                console.log(`开始分享阅读${jctqShareNum}次`)
+                for(let i=0; i<jctqShareNum; i++) {
+                    readCount++
+                    let maxWaitTime = 300000
+                    let minWaitTime = 30000
+                    let seedFactor = minWaitTime + 10000*(i+1)
+                    let factor = seedFactor > maxWaitTime ? maxWaitTime : seedFactor
+                    let randomTime = Math.floor(Math.random()*factor) + 1000
+                    let second = Math.floor(randomTime/1000)
+                    let idx = Math.floor(Math.random()*iosVer.length)
+                    UserAgent = `'Mozilla/5.0 (iPhone; CPU iPhone OS ${iosVer[idx]} like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.16(0x1800102c) NetType/WIFI Language/zh_CN'`
+                    si = randomString(32)
+                    console.log(`--随机延迟${second}秒后开始模拟第${readCount}次分享阅读`)
+                    await $.wait(randomTime)
+                    console.log(`----模拟第${readCount}次阅读，使用si=${si}`)
+                    await shareReadStep1()
+                    await $.wait(Math.floor(Math.random()*500)+500)
+                    await shareReadStep2()
+                    await $.wait(Math.floor(Math.random()*1000)+2000)
+                    await shareReadStep3()
+                    await $.wait(Math.floor(Math.random()*1000)+2000)
+                    await shareReadStep4()
+                    console.log(`----模拟第${readCount}次阅读完成`)
+                }
+                
             }
-        } else if(jctqWithdrawFlag == 0) {
-            console.log(`你设置了不自动提现`)
-        } else if(jctqWithdrawArr.length == 0) {
-            console.log(`没有找到提现body`)
         }
-        
-        numBoxbody = jctqCookieArr.length
-        console.log(`找到${numBoxbody}个cookie`)
-        
-        for(let i=0; i<numBoxbody; i++) {
-            notifyStr += `\n============= 账户${i+1} =============\n`
-            await getBalance(jctqCookieArr[i])
-            await $.wait(1000)
-        }
-        
-        await showmsg()
-        
     }
   
 
@@ -115,6 +104,11 @@ async function showmsg() {
 
 async function checkEnv() {
     
+    if(jctqShareNum == 0) {
+        console.log('当前分享次数设置为0。如果需要开启分享阅读，请设置环境变量jctqShareNum为要被阅读的次数。')
+        return false
+    }
+    
     if(jctqCookie) {
         if(jctqCookie.indexOf('@') > -1) {
             let jctqCookies = jctqCookie.split('@')
@@ -122,54 +116,16 @@ async function checkEnv() {
                 jctqCookieArr.push(replaceCookie(jctqCookies[i]))
             }
         } else {
-            
             jctqCookieArr.push(replaceCookie(jctqCookie))
         }
+    } else {
+        console.log('未找到jctqCookie')
+        return false
     }
     
-    if(jctqWithdraw) {
-        if(jctqWithdraw.indexOf('&') > -1) {
-            let jctqWithdraws = jctqWithdraw.split('&')
-            for(let i=0; i<jctqWithdraws.length; i++) {
-                jctqWithdrawArr.push(jctqWithdraws[i])
-            }
-        } else {
-            jctqWithdrawArr.push(jctqWithdraw)
-        }
-    }
+    console.log(`共找到${jctqCookieArr.length}个cookie`)
     
-    if(jctqQdBody) {
-        if(jctqQdBody.indexOf('&') > -1) {
-            let jctqQdBodyArr = jctqQdBody.split('&')
-            for(let i=0; i<jctqQdBodyArr.length; i++) {
-                jctqRewardBodyArr.push(jctqQdBodyArr[i])
-            }
-        } else {
-            jctqRewardBodyArr.push(jctqQdBody)
-        }
-    }
-    
-    if(jctqBoxbody) {
-        if(jctqBoxbody.indexOf('&') > -1) {
-            let jctqBoxbodyArr = jctqBoxbody.split('&')
-            for(let i=0; i<jctqBoxbodyArr.length; i++) {
-                jctqRewardBodyArr.push(jctqBoxbodyArr[i])
-            }
-        } else {
-            jctqRewardBodyArr.push(jctqBoxbody)
-        }
-    }
-    
-    if(jctqSignDoubleBody) {
-        if(jctqSignDoubleBody.indexOf('&') > -1) {
-            let jctqSignDoubleBodys = jctqSignDoubleBody.split('&')
-            for(let i=0; i<jctqSignDoubleBodys.length; i++) {
-                jctqSignDoubleBodyArr.push(jctqSignDoubleBodys[i])
-            }
-        } else {
-            jctqSignDoubleBodyArr.push(jctqSignDoubleBody)
-        }
-    }
+    return true
 }
 
 function replaceCookie(jctqCookieItem) {
@@ -185,119 +141,122 @@ function replaceCookie(jctqCookieItem) {
     return jctqCookieItem
 }
 
-///////////////////////////////////////////////////////////////////
-
-//领取奖励
-async function toGetReward(rewardBody,idx) {
+//转发页面列表
+async function listsNewTag() {
     let caller = printCaller()
-    let url = 'https://tq.xunsl.com/v5/CommonReward/toGetReward.json'
-    let urlObject = populatePostUrl(url,rewardBody)
+    let url = 'http://tq.xunsl.com/WebApi/ArticleTop/listsNewTag'
+    let urlObject = populatePostUrlShare(url,userCk)
     await httpPost(urlObject,caller)
     let result = httpResult;
     if(!result) return
     
-    if(result.success == true) {
-        if(result.items && result.items.score) {
-            let signStr = ''
-            if(result.items.title && result.items.title.indexOf('签到成功') > -1) signStr = '签到'
-            console.log(`领取第${idx+1}个奖励成功，${signStr}获得${result.items.score}金币`)
+    if(result.status == 1) {
+        if(result.data && result.data.items && Array.isArray(result.data.items)) {
+            let shareIdx = Math.floor(Math.random()*result.data.items.length)
+            newsItem = result.data.items[shareIdx]
+            await $.wait(1000)
+            await getShareArticleReward()
         }
     } else {
-        console.log(`领取第${idx+1}个奖励失败：${result.message}`)
+        console.log(`查询转发页面列表失败：${result.msg}`)
     }
 }
 
-//签到翻倍
-async function toDouble(rewardBody) {
+//转发文章
+async function getShareArticleReward() {
     let caller = printCaller()
-    let url = 'https://tq.xunsl.com/v5/CommonReward/toDouble.json'
-    let urlObject = populatePostUrl(url,rewardBody)
+    let url = 'http://tq.xunsl.com/WebApi/ShareNew/getShareArticleReward'
+    let reqBody = userCk + '&article_id=' + newsItem.id
+    let urlObject = populatePostUrlShare(url,reqBody)
     await httpPost(urlObject,caller)
     let result = httpResult;
     if(!result) return
     
-    if(result.success == true) {
-        if(result.items && result.items.score) {
-            console.log(`签到翻倍成功，获得${result.items.score}金币`)
+    if(result.status == 1) {
+        if(result.data.share == 1) {
+            console.log(`转发成功，文章标题：【${newsItem.title}】`)
         }
     } else {
-        console.log(`签到翻倍失败：${result.message}`)
+        console.log(`转发文章失败：${result.msg}`)
     }
 }
 
-//今日收益
-async function getBalance(cookie) {
+//分享阅读
+async function shareReadStep1() {
     let caller = printCaller()
-    let url = 'https://tq.xunsl.com/wap/user/balance?keyword_wyq=woyaoq.com&' + cookie
-    let urlObject = populateGetUrl(url)
+    let rndtime = Math.floor(new Date().getTime())
+    let share_url = encodeURIComponent(encodeURIComponent(newsItem.share_url+'#'))
+    let shareLink = `https://scripttq.xunsl.com/count2/storage?t=${si}&referer=${share_url}&_=${rndtime}&jsonpcallback=jsonp2`
+    let urlObject = populateGetUrlRead(shareLink)
     await httpGet(urlObject,caller)
-    let result = httpResult;
-    if(!result) return
-    
-    if(result.status == 0) {
-        notifyStr += `【金币总数】：${result.user.score}\n`
-        notifyStr += `【今日收益】：${result.user.today_score}\n`
-        for(let i=0; i<result.history.length; i++) {
-            let rewardItem = result.history[i]
-            if(rewardItem.newdate.indexOf('今日收益') > -1) {
-                for(let j=0; j<rewardItem.group.length; j++) {
-                    let groupItem = rewardItem.group[j]
-                    notifyStr += `----【${groupItem.name}】：${groupItem.money}\n`
-                }
-                break;
-            }
-        }
-    } else {
-        console.log(`查询今日收益失败：${result.message}`)
-    }
 }
 
-//提现
-async function withdraw(withBody) {
+async function shareReadStep2() {
     let caller = printCaller()
-    let url = 'https://tq.xunsl.com/v5/wechat/withdraw2.json '
-    let urlObject = populatePostUrl(url,withBody)
-    await httpPost(urlObject,caller)
-    let result = httpResult;
-    if(!result) return
-    
-    if(result.success == true) {
-        console.log(`=======提现成功=======`)
-        notifyStr += `=======提现成功=======\n`
-    } else {
-        console.log(`提现失败：${result.message}`)
+    let rndtime = Math.floor(new Date().getTime())
+    let share_url = encodeURIComponent(encodeURIComponent(newsItem.share_url+'#'))
+    let shareLink = `https://scripttq.xunsl.com/count2/visit?type=1&si=${si}&referer=${share_url}&_=${rndtime}&jsonpcallback=jsonp3`
+    let urlObject = populateGetUrlRead(shareLink)
+    await httpGet(urlObject,caller)
+}
+
+async function shareReadStep3() {
+    let caller = printCaller()
+    let rndtime = Math.floor(new Date().getTime())
+    let share_url = encodeURIComponent(encodeURIComponent(newsItem.share_url+'#'))
+    let shareLink = `https://scripttq.xunsl.com/count2/openpage?referer=${share_url}&_=${rndtime}&jsonpcallback=jsonp5`
+    let urlObject = populateGetUrlRead(shareLink)
+    await httpGet(urlObject,caller)
+}
+
+async function shareReadStep4() {
+    let caller = printCaller()
+    let rndtime = Math.floor(new Date().getTime())
+    let share_url = encodeURIComponent(encodeURIComponent(newsItem.share_url+'#'))
+    let shareLink = `https://scripttq.xunsl.com/count2/callback?si=${si}&referer=${share_url}&_=${rndtime}&jsonpcallback=jsonp6`
+    let urlObject = populateGetUrlRead(shareLink)
+    await httpGet(urlObject,caller)
+}
+
+function randomString(len=32) {
+    let chars = 'qwertyuiopasdfghjklzxcvbnm0123456789012345678901234567890123456789';
+    let maxLen = chars.length;
+    let str = '';
+    for (i = 0; i < len; i++) {
+        str += chars.charAt(Math.floor(Math.random()*maxLen));
     }
+    return str;
 }
 
 ////////////////////////////////////////////////////////////////////
-function populatePostUrl(url,reqBody){
+function populatePostUrlShare(url,reqBody){
     let rndtime = Math.floor(new Date().getTime()/1000)
     let urlObject = {
         url: url,
         headers: {
             'request_time' : rndtime,
             'Host' : 'tq.xunsl.com',
-            'device-model' : 'VOG-AL10',
             'device-platform' : 'android',
             'Connection' : 'keep-alive',
             'app-type' : 'jcweather',
+            'Referer' : 'http://tq.xunsl.com/h5/hotShare/?' + userCk,
         },
         body: reqBody
     }
     return urlObject;
 }
 
-function populateGetUrl(url){
-    let rndtime = Math.floor(new Date().getTime()/1000)
+function populateGetUrlRead(url){
     let urlObject = {
         url: url,
         headers: {
-            'request_time' : rndtime,
-            'Host' : 'tq.xunsl.com',
-            'device-model' : 'VOG-AL10',
-            'device-platform' : 'android',
+            'Host' : 'scripttq.xunsl.com',
             'Connection' : 'keep-alive',
-            'app-type' : 'jcweather',
+            'Accept' : '*/*',
+            'User-Agent' : UserAgent,
+            'Accept-Language' : 'zh-CN,zh-Hans;q=0.9',
+            'Referer' : 'https://bdzx.allcitysz.net/',
+            'Accept-Encoding' : 'gzip, deflate, br',
         }
     }
     return urlObject;
@@ -337,10 +296,7 @@ async function httpGet(url,caller) {
                     console.log(JSON.stringify(err));
                     $.logErr(err);
                 } else {
-                    if (safeGet(data,caller)) {
-                        httpResult = JSON.parse(data);
-                        if(logDebug) console.log(httpResult);
-                    }
+                    //
                 }
             } catch (e) {
                 $.logErr(e, resp);

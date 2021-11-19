@@ -18,11 +18,14 @@ let httpResult //global buffer
 
 let jctqCookie = ($.isNode() ? process.env.jctqCookie : $.getdata('jctqCookie')) || '';
 let jctqLookStartbody = ($.isNode() ? process.env.jctqLookStartbody : $.getdata('jctqLookStartbody')) || '';
+
+let jctqCookieArr = []
 let jctqLookStartbodyArr = []
+
+let userCookie = ''
 
 let bannerIdList = []
 let duplicatedCount = 0
-let invalidCount = 0
 let finishCount = 0
 let rewardAmount = 0
 
@@ -47,7 +50,11 @@ let rewardAmount = 0
             await $.wait(200)
         }
         
-        await getBoxRewardConf()
+        for(let i=0; i<jctqCookieArr.length; i++) {
+            console.log(`========== 查询第${i+1}个账户看看赚宝箱领取状态 ==========`)
+            userCookie = jctqCookieArr[i]
+            await getBoxRewardConf()
+        }
         
         await getStatus()
         await showmsg()
@@ -91,22 +98,30 @@ async function checkEnv() {
     
     if(jctqCookie) {
         if(jctqCookie.indexOf('@') > -1) {
-            jctqCookies = jctqCookie.split('@')
-            jctqCookie = jctqCookies[0]
-            console.log('检测到多于一个jctqCookie，开始跑第一个账户。请注意本脚本只支持单账户，如需多账户请自行修改。')
-        }
-        if(jctqCookie.indexOf('cookie=') == -1 && jctqCookie.indexOf('zqkey=') > -1) {
-            jctqCookie = jctqCookie.replace(/zqkey=/, "cookie=")
-        }
-        if(jctqCookie.indexOf('cookie_id=') == -1 && jctqCookie.indexOf('zqkey_id=') > -1) {
-            jctqCookie = jctqCookie.replace(/zqkey_id=/, "cookie_id=")
-        }
-        if(jctqCookie.indexOf('app_version=') == -1) {
-            jctqCookie = 'app_version=8.3.7&' + jctqCookie
+            let jctqCookies = jctqCookie.split('@')
+            for(let i=0; i<jctqCookies.length; i++) {
+                jctqCookieArr.push(replaceCookie(jctqCookies[i]))
+            }
+        } else {
+            
+            jctqCookieArr.push(replaceCookie(jctqCookie))
         }
     }
     
     return true
+}
+
+function replaceCookie(jctqCookieItem) {
+    if(jctqCookieItem.indexOf('cookie=') == -1 && jctqCookieItem.indexOf('zqkey=') > -1) {
+        jctqCookieItem = jctqCookieItem.replace(/zqkey=/, "cookie=")
+    }
+    if(jctqCookieItem.indexOf('cookie_id=') == -1 && jctqCookieItem.indexOf('zqkey_id=') > -1) {
+        jctqCookieItem = jctqCookieItem.replace(/zqkey_id=/, "cookie_id=")
+    }
+    if(jctqCookieItem.indexOf('app_version=') == -1) {
+        jctqCookieItem = 'app_version=8.3.7&' + jctqCookieItem
+    }
+    return jctqCookieItem
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -141,8 +156,6 @@ async function adlickstart(lookStartBody,idx) {
             console.log(`第${idx+1}次看看赚任务[id:${bannerId}]重复`)
         }
     } else {
-        invalidCount++
-        await removeBody(lookStartBody)
         console.log(`激活第${idx+1}个看看赚失败：${result.message}`)
     }
 }
@@ -184,7 +197,7 @@ async function adlickend(lookStartBody,idx) {
 //看看赚宝箱状态
 async function getBoxRewardConf() {
     let caller = printCaller()
-    let reqCk = 'device_type=android&' + jctqCookie
+    let reqCk = 'device_type=android&' + userCookie
     let url = 'http://tq.xunsl.com/WebApi/Nameless/getBoxRewardConf?' + reqCk
     let urlObject = populateGetUrl(url)
     urlObject.headers.Referer = 'http://tq.xunsl.com/h5/20190527watchMoney/?' + reqCk
@@ -210,7 +223,7 @@ async function getBoxRewardConf() {
 //看看赚宝箱领取
 async function getBoxReward(id) {
     let caller = printCaller()
-    let reqCk = 'device_type=android&' + jctqCookie
+    let reqCk = 'device_type=android&' + userCookie
     let url = `http://tq.xunsl.com/WebApi/Nameless/getBoxReward?id=${id}&${reqCk}`
     let urlObject = populateGetUrl(url)
     urlObject.headers.Referer = 'http://tq.xunsl.com/h5/20190527watchMoney/?' + reqCk
@@ -252,7 +265,6 @@ async function getStatus() {
     notifyStr += `本次运行情况：\n`
     notifyStr += `共完成了${finishCount}个看看赚任务，获得${rewardAmount}金币\n`
     if(duplicatedCount > 0) notifyStr += `删除了${duplicatedCount}个重复的body\n`
-    if(invalidCount > 0) notifyStr += `删除了${invalidCount}个无效的body\n`
 }
 
 ////////////////////////////////////////////////////////////////////
