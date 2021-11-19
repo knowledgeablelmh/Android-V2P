@@ -1,0 +1,12 @@
+{
+  "name": "腾讯自选股重写订阅",
+  "author": "elecV2p",
+  "mitmhost": ["wzq.tenpay.com"],
+  "rewrite": [
+    {
+      "match": "https://wzq.tenpay.com/cgi-bin/activity_task_daily.fcgi?",
+      "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/txzxg/txstock.js",
+      "enable": true
+    }
+  ]
+}
