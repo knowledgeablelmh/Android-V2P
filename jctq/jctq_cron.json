@@ -2,7 +2,7 @@
   "name": "晶彩天气定时任务订阅",
   "desc": "无",
   "date": "2021-11-17",
-  "resource": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json",
+  "resource": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json",
   "list": [
     {
       "name": "晶彩天气任务签到",
@@ -10,7 +10,7 @@
       "time": "30 0,21 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_reward.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_reward.js"
       }
     },
     {
@@ -20,7 +20,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_read.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_read.js"
       }
     },
     {
@@ -30,7 +30,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_kkz.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_kkz.js"
       }
     },
     {
@@ -40,7 +40,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_daily.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_daily.js"
       }
     }
   ]
