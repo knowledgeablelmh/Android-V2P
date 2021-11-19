@@ -17,3 +17,5 @@
 * jctq_reward.js  -- 签到和翻倍，任务奖励领取，统计今日收益，自动提现
 * jctq_kkz.js     -- 完成看看赚任务，删除重复和失效的body
 * jctq_read.js    -- 阅读文章，浏览视频
+## 分享阅读：  
+* jctq_shareRead.js       -- 分享和助力阅读，需要在环境变量jctqShareNum里设置要被阅读的次数，不设置默认不跑  
