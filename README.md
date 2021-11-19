@@ -7,21 +7,23 @@
 ## 不要fork不要fork不要fork不要fork不要fork不要fork不要fork不要fork不要fork不要fork
 
 ## 中青看点重写订阅
-* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqcx.json
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqcx.json
 ## 中青看点任务订阅
-* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json
 
 ## 晶彩看点重写订阅
-* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jccx.json
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jccx.json
 ## 晶彩看点任务订阅
-* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_cron.json
 
 ## 晶彩天气重写订阅
-* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctqcx.json
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctqcx.json
 ## 晶彩天气任务订阅
-* https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json
 
-# 晶彩看点(v8.1.6)晶彩天气(v8.3.7)中青看点(v3.6.0)电视家(v2.9.1)-----右边安装包下载
+# 右边安装包下载
+晶彩看点(v8.1.6)晶彩天气(v8.3.7)中青看点(v3.6.0)电视家(v2.9.1)
+
 ## 特别声明:
 
 * 本仓库涉仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
