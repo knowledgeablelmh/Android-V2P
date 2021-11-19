@@ -8,7 +8,7 @@
     {
       "name": "中青看点签到",
       "type": "cron",
-      "time": "30 0 * * *",
+      "time": "30 0,12 * * *",
       "job": {
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqqd.js"
@@ -47,7 +47,7 @@
     {
       "name": "中青看点福利视频",
       "type": "cron",
-      "time": "30 12 * * *",
+      "time": "30 12,13 * * *",
       "running": true,
       "job": {
         "type": "runjs",
@@ -57,7 +57,7 @@
     {
       "name": "中青看点每日任务宝箱领取",
       "type": "cron",
-      "time": "30 20 * * *",
+      "time": "30 20,21 * * *",
       "running": true,
       "job": {
         "type": "runjs",
@@ -77,7 +77,7 @@
     {
       "name": "中青看点好友签到红包",
       "type": "cron",
-      "time": "15 7 * * *",
+      "time": "15 7,8 * * *",
       "running": true,
       "job": {
         "type": "runjs",
@@ -107,7 +107,7 @@
     {
       "name": "中青看点搜索赚",
       "type": "cron",
-      "time": "30 6 * * *",
+      "time": "30 6,7 * * *",
       "running": true,
       "job": {
         "type": "runjs",
@@ -117,7 +117,7 @@
     {
       "name": "中青看点浏览赚",
       "type": "cron",
-      "time": "45 6 * * *",
+      "time": "45 6,7 * * *",
       "running": true,
       "job": {
         "type": "runjs",
@@ -127,7 +127,7 @@
     {
       "name": "中青看点阅读翻倍",
       "type": "cron",
-      "time": "30 5 * * *",
+      "time": "30 5,6 * * *",
       "running": true,
       "job": {
         "type": "runjs",
@@ -137,7 +137,7 @@
     {
       "name": "中青看点5分钟60分钟任务",
       "type": "cron",
-      "time": "0 20 * * *",
+      "time": "0 20,21 * * *",
       "job": {
         "type": "runjs",
         "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_5_60.js"
