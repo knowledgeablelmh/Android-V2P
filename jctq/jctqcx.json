@@ -51,7 +51,7 @@
     {
     "match": "https://tq.xunsl.com/v5/CommonReward/toDouble.json",
     "stage": "req",
-    "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/jctq/jctq_rewrite.js",
+    "target": "https://ghproxy.com/https://raw.githubusercontent.com/leafxcy/JavaScript/main/jctq/jctq_rewrite.js",
     "enable": true
     }
   ]
