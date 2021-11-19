@@ -40,7 +40,7 @@
     },
     {
       "match": "https://ant.xunsl.com/v5/wechat/withdraw2.json",
-      "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_withdraw.js",
+      "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jckd/jc_withdraw.js",
       "enable": true
     },
     {
