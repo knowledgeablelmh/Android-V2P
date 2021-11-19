@@ -3,7 +3,7 @@
   "desc": "无",
   "date": "2021-11-17",
   "author": "https://t.me/ShaolinTemple1",
-  "resource": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json",
+  "resource": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_cron.json",
   "list": [
     {
       "name": "中青看点签到",
@@ -11,7 +11,7 @@
       "time": "30 0 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqqd.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqqd.js"
       }
     },
     {
@@ -21,7 +21,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqwz.js"
       }
     },
     {
@@ -31,7 +31,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqkkz.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqkkz.js"
       }
     },
     {
@@ -41,7 +41,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_share.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_share.js"
       }
     },
     {
@@ -51,7 +51,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_Adv_video.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_Adv_video.js"
       }
     },
     {
@@ -61,7 +61,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqbox.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqbox.js"
       }
     },
     {
@@ -71,7 +71,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_today_score.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_today_score.js"
       }
     },
     {
@@ -81,7 +81,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_friendSign.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_friendSign.js"
       }
     },
     {
@@ -91,7 +91,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_Rotary.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_Rotary.js"
       }
     },
     {
@@ -101,7 +101,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_wakeup.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_wakeup.js"
       }
     },
     {
@@ -111,7 +111,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqssz.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqssz.js"
       }
     },
     {
@@ -121,7 +121,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqllz.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zqllz.js"
       }
     },
     {
@@ -131,7 +131,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_double.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_double.js"
       }
     },
     {
@@ -140,7 +140,7 @@
       "time": "0 20 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_5_60.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_5_60.js"
       }
     },
     {
@@ -150,7 +150,7 @@
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_withdraw.js"
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/zqkd/zq_withdraw.js"
       }
     }
 
