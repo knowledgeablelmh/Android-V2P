@@ -21,6 +21,11 @@ https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V
 ## 晶彩天气任务订阅
 https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/jctq/jctq_cron.json
 
+腾讯自选股重写订阅
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/txzxg/txzxgcx.json
+腾讯自选股任务订阅
+https://ghproxy.com/https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/txzxg/txzxg_cron.json
+
 # 右边安装包下载
 晶彩看点(v8.1.6)晶彩天气(v8.3.7)中青看点(v3.6.0)电视家(v2.9.1)
 
