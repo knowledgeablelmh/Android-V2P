@@ -4,8 +4,8 @@
 15 0,1,8,15,20 * * *
 
 ## 重写
-匹配链接 https://v3.sdk.haowusong.com/api/box/wallet/info
-重写方式 https://raw.githubusercontent.com/leafxcy/JavaScript/main/daw.js
+* 匹配链接 https://v3.sdk.haowusong.com/api/box/wallet/info
+* 重写方式 https://raw.githubusercontent.com/knowledgeablelmh/Android-V2P/main/daw/daw.js
 
 ## MITM
 解析域名 v3.sdk.haowusong.com
